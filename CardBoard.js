@@ -132,9 +132,10 @@ export class CardBoard extends Component {
           Score:<span id="result"> {this.state.score}</span>
         </h1>
         <div className="grid">{this.creatingCardLayout()}</div>
-        <footer className="footer">
+        <h1>
           I don't own any of the images, they goes to their respective owners.
-        </footer>
+        </h1>
+        <footer className="footer">&copy; Copyright 2020 Jt inc.</footer>
       </div>
     );
   }
