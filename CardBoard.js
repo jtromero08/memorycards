@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import CardCreator from "./CardCreator";
 import cards from "./cards.json";
 import _ from "lodash";
+import CardLayout from "./CardLayout";
 
 export class CardBoard extends Component {
   constructor() {
@@ -104,7 +104,7 @@ export class CardBoard extends Component {
    * }
    */
 
-  creatingCardLayout() {
+  creatingCardsLayout() {
     if (!this.state.duplicated) {
       return <h1>Loading...</h1>;
     }
@@ -112,7 +112,7 @@ export class CardBoard extends Component {
     if (this.state.duplicated) {
       return _.map(this.state.duplicated, (card) => {
         return (
-          <CardCreator
+          <CardLayout
             flipCard={this.flipCard}
             key={card.id}
             cardProps={{
@@ -131,7 +131,7 @@ export class CardBoard extends Component {
         <h1>
           Score:<span id="result"> {this.state.score}</span>
         </h1>
-        <div className="grid">{this.creatingCardLayout()}</div>
+        <div className="grid">{this.creatingCardsLayout()}</div>
         <h1>
           I don't own any of the images, they goes to their respective owners.
         </h1>

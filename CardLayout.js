@@ -2,7 +2,7 @@ import React from "react";
 import _ from "lodash";
 import "./style.css";
 
-const CardCreator = (props) => {
+const CardLayout = (props) => {
   let card = props.cardProps.state;
   let emptyAndFront = props.cardProps.eAF;
 
@@ -22,4 +22,4 @@ const CardCreator = (props) => {
   );
 };
 
-export default CardCreator;
+export default CardLayout;

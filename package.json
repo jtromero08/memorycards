@@ -4,7 +4,7 @@
   "description": "Classic memory card game. ",
   "main": "index.html",
   "scripts": {
-    "test": "\"rm -rf dist/*.js dist/*.html dist/*.css dist/*.map && parcel index.html"
+    "dev": "\"rm -rf dist/*.js dist/*.html dist/*.css dist/*.map && parcel index.html"
   },
   "repository": {
     "type": "git",
@@ -23,5 +23,8 @@
     "lodash": "^4.17.15",
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4"
   }
 }
