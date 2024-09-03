@@ -6,7 +6,7 @@ dist/*.map
 dist/*.css
 dist/*.js
 dist/*.html
-dist/images/
+dist/images
 src/assets/images
 
 .parcel-cache
