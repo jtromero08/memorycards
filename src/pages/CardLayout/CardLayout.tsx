@@ -1,5 +1,3 @@
-import React from 'react';
-
 export default function CardLayout({flipCard, cardProps}: any) {
     let card = cardProps.state;
     let emptyAndFront = cardProps.eaf;
