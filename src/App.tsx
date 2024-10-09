@@ -1,5 +1,11 @@
+import CardBoard from "./pages/CardBoard/CardBoard";
+
 const App = () =>{
-    return (<div>Hello, world!</div>);
+    return (
+        <>
+            <CardBoard></CardBoard>
+        </>
+    );
 }
 
 export default App;
