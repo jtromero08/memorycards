@@ -18,9 +18,9 @@ export function cardGenerator() {
     // Since using and arrow function, I wrap the object in parenthese
     // so JS don't get confuse with the curly braces.
     return duplication.map((card: any) => ({
-        id: i++,
-        card: card.name,
-        img: card.img,
-        flipped: false
-    }))
+                id: i++,
+                name: card.name,
+                img: card.img,
+                flipped: false
+            }))
 }
