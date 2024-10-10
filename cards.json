@@ -20,7 +20,11 @@
     "img": "images/x.png"
   },
   {
-    "front": "images/front.png",
-    "blank": "images/blank.png"
+    "name": "front",
+    "img": "images/front.png"
+  },
+  {
+    "name": "blank",
+    "img": "images/blank.png"
   }
 ]
