@@ -14,9 +14,12 @@ export default function CardBoard() {
             </h1>
             <div>
                 {
-                    cards.map((card: any, index: any) => (
-                        <CardLayout key={index} card={card}/>
-                    ))
+                    cards.map((card: any, index: any) => {
+                        if(card.name !== "front" && card.name !== "blank") {
+                            return <CardLayout key={index} card={card}/>
+                        }
+                        return null
+                    })
                 }
             </div>
             <div>
