@@ -1,40 +1,39 @@
-import { useState } from "react";
+import { Card } from "../../types/cards";
 
-export default function CardLayout({card}: any) {
-    let cardImg;
-    const [theCard, setTheCard] = useState({
-        id: card.id,
-        cardName: card.name,
-        cardImgUrl: card.img,
-        flipped: false
-    })
+interface CardProps {
+    card: Card;
+    handleChoice: (card: Card) => void;
+    flipped: boolean;
+    disabled: boolean;
+}
 
-    if(!card) return (<h1 style={{color: 'red'}}> Error: No card! </h1>);
-
-    if(theCard.flipped) {
-        cardImg = <img 
-            src={card.img} 
-            className="card__face card__face--front" 
-        />
-    } else {
-        cardImg = <img 
-            src={card.img} 
-            className="card__face card__face--back" 
-        />
+export default function CardLayout({card, handleChoice, flipped, disabled}: CardProps) {
+    const handledClick = () => {
+        if(!disabled) {
+            handleChoice(card);
+        }
     }
 
     return (
-        <div
-            onClick={() => setTheCard(
+        <div className="card">
+            <div className={flipped ? 'flipped' : 'front'}>
                 {
-                    id: card.id,
-                    cardName: card.name,
-                    cardImgUrl: card.img,
-                    flipped: true
+                    flipped ? (
+                        <img 
+                            className="front"
+                            src={card.src} 
+                            alt="card front" 
+                        />
+                    ) : (
+                        <img
+                            className="back" 
+                            src="images/back.png" 
+                            onClick={handledClick}
+                            alt="card back" 
+                        />
+                    )
                 }
-            )}
-        >
-            {cardImg}
+            </div>
         </div>
-    )
+    );
 }

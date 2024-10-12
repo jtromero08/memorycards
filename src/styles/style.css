@@ -16,12 +16,12 @@
   backface-visibility: hidden;
 }
 
-.card__face--back {
-  transform: rotateY(180deg);
+.back {
+  transform: rotate(180deg);
 }
 
-.card.is-flipped {
-  transform: rotateY(180deg);
+.flipped {
+  transform: rotate(180deg);
 }
 
 .footer {
