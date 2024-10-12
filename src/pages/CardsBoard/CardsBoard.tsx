@@ -55,16 +55,20 @@ export default function CardBoard() {
             </h1>
             <div className="grid">
                 {
-                    cards.map((card: Card) => (
-
-                        <CardLayout 
-                            key={card.id}
-                            card={card}
-                            handleChoice={handleChoiceCard}
-                            flipped={!!(card === firstChoice || card === secondChoice || card.matched)}
-                            disabled={disabled}
-                        />
-                    ))
+                    cards.map((card: Card) => {
+                        if(card.src !== "images/back.png") {
+                            return (
+                                <CardLayout 
+                                    key={card.id}
+                                    card={card}
+                                    handleChoice={handleChoiceCard}
+                                    flipped={!!(card === firstChoice || card === secondChoice || card.matched)}
+                                    disabled={disabled}
+                                />
+                            )
+                        }
+                        return null;
+                    })
                 }
             </div>
         </div>

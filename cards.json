@@ -22,9 +22,5 @@
   {
     "name": "back",
     "src": "images/back.png"
-  },
-  {
-    "name": "blank",
-    "src": "images/blank.png"
   }
 ]
