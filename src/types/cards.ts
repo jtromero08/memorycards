@@ -1,6 +1,8 @@
 export interface Card {
     name: string,
-    img: string
+    src: string,
+    matched?: boolean,
+    id?: number
 }
 
 export interface Cards {
