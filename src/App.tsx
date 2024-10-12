@@ -1,4 +1,4 @@
-import CardBoard from "./pages/CardBoard/CardBoard";
+import CardBoard from "./pages/CardsBoard/CardsBoard";
 
 const App = () =>{
     return (
