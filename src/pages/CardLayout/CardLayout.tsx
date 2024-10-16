@@ -1,39 +1,19 @@
-import { Card } from "../../types/cards";
+import { CardProps } from "../../types/cardsInterfaces";
 
-interface CardProps {
-    card: Card;
-    handleChoice: (card: Card) => void;
-    flipped: boolean;
-    disabled: boolean;
-}
+const Card: React.FC<CardProps> = ({ card, flipCard }) => {
+  return (
+    <div
+      className="card"                    // Add a class for styling
+      onClick={() => flipCard(card)}     // Call flipCard with the current card on click
+      style={{ cursor: "pointer", width: "100px", height: "150px", border: "1px solid #ccc", borderRadius: "8px", display: "flex", justifyContent: "center", alignItems: "center", backgroundColor: card.isFlipped || card.isMatched ? "white" : "#eee" }}
+    >
+      {card.isFlipped || card.isMatched ? (
+        <img src={card.src} alt={card.name} style={{ width: "100%", height: "100%", borderRadius: "8px" }} />
+      ) : (
+        "?"                               // Show placeholder when not flipped
+      )}
+    </div>
+  );
+};
 
-export default function CardLayout({card, handleChoice, flipped, disabled}: CardProps) {
-    const handledClick = () => {
-        if(!disabled) {
-            handleChoice(card);
-        }
-    }
-
-    return (
-        <div className="card">
-            <div className={flipped ? 'flipped' : 'front'}>
-                {
-                    flipped ? (
-                        <img 
-                            className="front"
-                            src={card.src} 
-                            alt="card front" 
-                        />
-                    ) : (
-                        <img
-                            className="back" 
-                            src="images/back.png" 
-                            onClick={handledClick}
-                            alt="card back" 
-                        />
-                    )
-                }
-            </div>
-        </div>
-    );
-}
+export default Card;
