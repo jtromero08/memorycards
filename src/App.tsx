@@ -1,9 +1,9 @@
-import CardBoard from "./pages/CardsBoard/CardsBoard";
+import MemoryCardGame from "./pages/MemoryCardGame/MemoryCardGame";
 
 const App = () =>{
     return (
         <>
-            <CardBoard></CardBoard>
+           <MemoryCardGame /> 
         </>
     );
 }
