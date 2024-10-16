@@ -2,11 +2,7 @@ node_modules/
 
 # all bundler files by parceljs
 .cache/
-dist/*.map
-dist/*.css
-dist/*.js
-dist/*.html
-dist/images
+dist/
 src/assets/images
 
 .parcel-cache
