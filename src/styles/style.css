@@ -10,6 +10,7 @@
   position: relative;
   transition: transform 1s;
   transform-style: preserve-3d;
+  cursor: pointer;
 }
 
 .card__face {
@@ -28,4 +29,25 @@
   font-family: Arial;
   font-weight: 600;
   font-size: large;
+}
+
+/* src/components/Card.module.css */
+.card {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ccc;
+  font-size: 2rem;
+  cursor: pointer;
+  border: 2px solid #000;
+  transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+.cardFlipped,
+.cardMatched {
+  background-color: #fff;
+  transform: scale(1.05);
+  cursor: default;
 }

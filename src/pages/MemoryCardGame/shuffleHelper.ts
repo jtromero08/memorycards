@@ -1,7 +1,7 @@
-import cards from '../../../cards.json';
+import { Card } from '../../types/cardsInterfaces';
 // import { GameStructure } from '../../types/gameSructure';
 
-export function cardGenerator() {
+/*export function cardGenerator() {
     const duplicationCard: any = [...cards,...cards];
     const shuffledCards = duplicationCard
         .sort(() => Math.random() - 0.5)
@@ -16,4 +16,16 @@ export function cardGenerator() {
 
 export function handleChoice(card: any, firstChoice: any, setSecondChoice: any, setFirstChoice: any) {
     return firstChoice ? setSecondChoice(card) : setFirstChoice(card);
-}
+}*/
+
+export const shuffleCards = (cards: string[]): Card[] => {
+    return cards
+        .concat(cards)
+        .sort(() => Math.random()-0.5)
+        .map((src: any, index: any) => ({
+            id: index,
+            src,
+            isFlipped: false,
+            isMatched: false
+        }));
+};
