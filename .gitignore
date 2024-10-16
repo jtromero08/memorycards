@@ -1,0 +1,14 @@
+node_modules/
+
+# all bundler files by parceljs
+.cache/
+dist/*.map
+dist/*.css
+dist/*.js
+dist/*.html
+dist/images
+src/assets/images
+
+.parcel-cache
+
+package-lock.json
