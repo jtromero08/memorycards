@@ -1,0 +1,1 @@
+{"root":["./src/app.tsx","./src/index.tsx","./src/vite-env.d.ts","./src/helpers/gamelogic.ts","./src/helpers/shufflehelper.ts","./src/pages/cardlayout/cardlayout.tsx","./src/pages/cardsboard/cardboard.tsx","./src/pages/memorycardgame/memorycardgame.tsx","./src/types/cardsinterfaces.ts"],"version":"5.6.2"}
